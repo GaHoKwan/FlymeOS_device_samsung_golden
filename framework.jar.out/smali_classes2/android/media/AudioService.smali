@@ -888,7 +888,7 @@
 
     move-result-object v0
 
-    const v1, 0x112004a
+    const v1, #android:bool@config_voice_capable#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -976,7 +976,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0004
+    const v1, #android:integer@config_soundEffectVolumeDb#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1019,7 +1019,7 @@
 
     move-result-object v0
 
-    const v1, 0x112006c
+    const v1, #android:bool@config_camera_sound_forced#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1069,7 +1069,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0077
+    const v1, #android:integer@config_safe_media_volume_index#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1086,7 +1086,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120071
+    const v1, #android:bool@config_useFixedVolume#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1289,7 +1289,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120012
+    const v1, #android:bool@config_useMasterVolume#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1305,7 +1305,7 @@
 
     move-result-object v0
 
-    const v1, 0x1070014
+    const v1, #android:array@config_masterVolumeRamp#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -3460,6 +3460,8 @@
     invoke-virtual {v0, v6, p3}, Landroid/media/AudioService$VolumeController;->suppressAdjustment(II)Z
 
     move-result v0
+
+    const/4 v0, 0x0
 
     if-eqz v0, :cond_2
 
@@ -6145,7 +6147,7 @@
 
     move-result-object v0
 
-    const v1, 0x112006c
+    const v1, #android:bool@config_camera_sound_forced#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -6818,7 +6820,7 @@
 
     move-result-object v11
 
-    const v12, 0x1110001
+    const v12, #android:xml@audio_assets#t
 
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
@@ -7646,7 +7648,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e0077
+    const v2, #android:integer@config_safe_media_volume_index#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -7673,7 +7675,7 @@
 
     move-result-object v1
 
-    const v2, 0x112006a
+    const v2, #android:bool@config_safe_media_volume_enabled#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -16645,3 +16647,272 @@
         :pswitch_0
     .end packed-switch
 .end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$3900(Landroid/media/AudioService;Ljava/lang/String;)V
+#    .locals 0
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .param p1, "x1"    # Ljava/lang/String;
+#    .prologue
+#    invoke-direct {p0, p1}, Landroid/media/AudioService;->makeA2dpSrcUnavailable(Ljava/lang/String;)V
+#    return-void
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$6100(Landroid/media/AudioService;)I
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget v0, p0, Landroid/media/AudioService;->mForcedUseForComm:I
+#    return v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$6300(Landroid/media/AudioService;IZ)V
+#    .locals 0
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .param p1, "x1"    # I
+#    .param p2, "x2"    # Z
+#    .prologue
+#    invoke-direct {p0, p1, p2}, Landroid/media/AudioService;->setRingerModeInt(IZ)V
+#    return-void
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$6400(Landroid/media/AudioService;)V
+#    .locals 0
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    invoke-direct {p0}, Landroid/media/AudioService;->restoreMasterVolume()V
+#    return-void
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$6500(Landroid/media/AudioService;)Z
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-boolean v0, p0, Landroid/media/AudioService;->mMonitorOrientation:Z
+#    return v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$6600(Landroid/media/AudioService;)V
+#    .locals 0
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    invoke-direct {p0}, Landroid/media/AudioService;->setOrientationForAudioSystem()V
+#    return-void
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$6700(Landroid/media/AudioService;)Z
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-boolean v0, p0, Landroid/media/AudioService;->mMonitorRotation:Z
+#    return v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$6800(Landroid/media/AudioService;)Ljava/lang/Object;
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-object v0, p0, Landroid/media/AudioService;->mBluetoothA2dpEnabledLock:Ljava/lang/Object;
+#    return-object v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$6900(Landroid/media/AudioService;)Z
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-boolean v0, p0, Landroid/media/AudioService;->mBluetoothA2dpEnabled:Z
+#    return v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$7000(Landroid/media/AudioService;)Ljava/lang/Object;
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-object v0, p0, Landroid/media/AudioService;->mSettingsLock:Ljava/lang/Object;
+#    return-object v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$7100(Landroid/media/AudioService;)Z
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-boolean v0, p0, Landroid/media/AudioService;->mDockAudioMediaEnabled:Z
+#    return v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$7200(Landroid/media/AudioService;)Landroid/hardware/hdmi/HdmiControlManager;
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-object v0, p0, Landroid/media/AudioService;->mHdmiManager:Landroid/hardware/hdmi/HdmiControlManager;
+#    return-object v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$7300(Landroid/media/AudioService;)Landroid/hardware/hdmi/HdmiTvClient;
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-object v0, p0, Landroid/media/AudioService;->mHdmiTvClient:Landroid/hardware/hdmi/HdmiTvClient;
+#    return-object v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$7400(Landroid/media/AudioService;)Z
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-boolean v0, p0, Landroid/media/AudioService;->mHdmiSystemAudioSupported:Z
+#    return v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$8500(Landroid/media/AudioService;)I
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget v0, p0, Landroid/media/AudioService;->mDockState:I
+#    return v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$8502(Landroid/media/AudioService;I)I
+#    .locals 0
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .param p1, "x1"    # I
+#    .prologue
+#    iput p1, p0, Landroid/media/AudioService;->mDockState:I
+#    return p1
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$8600(Landroid/media/AudioService;ZILjava/lang/String;)Z
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .param p1, "x1"    # Z
+#    .param p2, "x2"    # I
+#    .param p3, "x3"    # Ljava/lang/String;
+#    .prologue
+#    invoke-direct {p0, p1, p2, p3}, Landroid/media/AudioService;->handleDeviceConnection(ZILjava/lang/String;)Z
+#    move-result v0
+#    return v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$8700(Landroid/media/AudioService;Landroid/content/Intent;)V
+#    .locals 0
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .param p1, "x1"    # Landroid/content/Intent;
+#    .prologue
+#    invoke-direct {p0, p1}, Landroid/media/AudioService;->sendStickyBroadcastToAll(Landroid/content/Intent;)V
+#    return-void
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$8800(Landroid/media/AudioService;)Landroid/media/AudioService$AudioOrientationEventListener;
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-object v0, p0, Landroid/media/AudioService;->mOrientationListener:Landroid/media/AudioService$AudioOrientationEventListener;
+#    return-object v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$8900(Landroid/media/AudioService;Landroid/content/Context;)V
+#    .locals 0
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .param p1, "x1"    # Landroid/content/Context;
+#    .prologue
+#    invoke-direct {p0, p1}, Landroid/media/AudioService;->handleConfigurationChanged(Landroid/content/Context;)V
+#    return-void
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$9000(Landroid/media/AudioService;)Landroid/media/MediaFocusControl;
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-object v0, p0, Landroid/media/AudioService;->mMediaFocusControl:Landroid/media/MediaFocusControl;
+#    return-object v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$9100(Landroid/media/AudioService;Z)V
+#    .locals 0
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .param p1, "x1"    # Z
+#    .prologue
+#    invoke-direct {p0, p1}, Landroid/media/AudioService;->readAudioSettings(Z)V
+#    return-void
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$9200(Landroid/media/AudioService;)Z
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-boolean v0, p0, Landroid/media/AudioService;->mHdmiCecSink:Z
+#    return v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$9202(Landroid/media/AudioService;Z)Z
+#    .locals 0
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .param p1, "x1"    # Z
+#    .prologue
+#    iput-boolean p1, p0, Landroid/media/AudioService;->mHdmiCecSink:Z
+#    return p1
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$9300(Landroid/media/AudioService;)V
+#    .locals 0
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    invoke-direct {p0}, Landroid/media/AudioService;->checkAllFixedVolumeDevices()V
+#    return-void
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$9500(Landroid/media/AudioService;)Landroid/media/AudioService$VolumeController;
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-object v0, p0, Landroid/media/AudioService;->mVolumeController:Landroid/media/AudioService$VolumeController;
+#    return-object v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$9600(Landroid/media/AudioService;IIILjava/lang/String;I)V
+#    .locals 0
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .param p1, "x1"    # I
+#    .param p2, "x2"    # I
+#    .param p3, "x3"    # I
+#    .param p4, "x4"    # Ljava/lang/String;
+#    .param p5, "x5"    # I
+#    .prologue
+#    invoke-direct/range {p0 .. p5}, Landroid/media/AudioService;->adjustSuggestedStreamVolume(IIILjava/lang/String;I)V
+#    return-void
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$9900(Landroid/media/AudioService;)Ljava/util/HashMap;
+#    .locals 1
+#    .param p0, "x0"    # Landroid/media/AudioService;
+#    .prologue
+#    iget-object v0, p0, Landroid/media/AudioService;->mAudioPolicies:Ljava/util/HashMap;
+#    return-object v0
+#.end method
