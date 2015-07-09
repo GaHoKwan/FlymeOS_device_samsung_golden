@@ -7,7 +7,7 @@
 # The default value is base.
 # Support values: base, base_cm, base_mt6592 and other devices in the future.
 #-----------------------------------------------------------------------------
-BASE := cm_A0001
+BASE := base_cm
 
 ##############################################################################
 # The value is used for resource adapter with the aapt tool.
@@ -95,7 +95,7 @@ vendor_modify_jars := android.policy framework services telephony-common
 # The default value is nothing.
 # You can configure the board system apk name in the value.
 #-----------------------------------------------------------------------------
-board_remove_apps := LogReport NfcNci
+board_remove_apps := Browser LogReport NfcNci
 
 ##############################################################################
 # The value decides which apk you want to modify, when the apk is based on the board system apk.
