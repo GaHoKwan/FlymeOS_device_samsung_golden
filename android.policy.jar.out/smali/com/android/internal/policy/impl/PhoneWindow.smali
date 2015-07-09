@@ -9,7 +9,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;,
         Lcom/android/internal/policy/impl/PhoneWindow$DialogMenuCallback;,
         Lcom/android/internal/policy/impl/PhoneWindow$RotationWatcher;,
         Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;,
@@ -889,7 +888,7 @@
 
     .line 4149
     :cond_1
-    const v0, #android:id@progress_circular#t
+    const v0, 0x1020377
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
@@ -1043,7 +1042,7 @@
 
     .line 4163
     :cond_1
-    const v0, #android:id@progress_horizontal#t
+    const v0, 0x1020378
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
@@ -1130,7 +1129,7 @@
 
     .line 4131
     :cond_1
-    const v0, #android:id@left_icon#t
+    const v0, 0x1020032
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
@@ -1325,7 +1324,7 @@
 
     .line 4177
     :cond_1
-    const v0, #android:id@right_icon#t
+    const v0, 0x1020034
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
@@ -1374,7 +1373,7 @@
     .local v1, "transition":Landroid/transition/Transition;
     if-eq v2, v4, :cond_1
 
-    const/high16 v3, #android:transition@no_transition#t
+    const/high16 v3, 0x10f0000
 
     if-eq v2, v3, :cond_1
 
@@ -1473,7 +1472,7 @@
 
     move-result-object v2
 
-    const v3, #android:anim@fade_out#t
+    const v3, 0x10a0001
 
     invoke-static {v2, v3}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -1606,7 +1605,7 @@
     .line 3825
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mDecor:Lcom/android/internal/policy/impl/PhoneWindow$DecorView;
 
-    const v8, #android:id@decor_content_parent#t
+    const v8, 0x1020379
 
     invoke-virtual {v7, v8}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->findViewById(I)Landroid/view/View;
 
@@ -1680,8 +1679,6 @@
 
     .line 3842
     :cond_3
-    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;->setWindowAttributesToActionbar(Lcom/android/internal/policy/impl/PhoneWindow;)V
-
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mDecorContentParent:Lcom/android/internal/widget/DecorContentParent;
 
     iget v8, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mUiOptions:I
@@ -2080,8 +2077,6 @@
 
     invoke-interface {v7, v8}, Lcom/android/internal/widget/DecorContentParent;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;->mzSetDefaultIcon(Lcom/android/internal/policy/impl/PhoneWindow;)V
-
     .line 3851
     iget v7, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mResourcesSetFlags:I
 
@@ -2095,7 +2090,7 @@
     .end local v1    # "i":I
     .end local v3    # "localFeatures":I
     :cond_11
-    const v7, #android:id@title#t
+    const v7, 0x1020016
 
     invoke-virtual {p0, v7}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
@@ -2130,17 +2125,21 @@
 
     if-eqz v7, :cond_13
 
-    const v7, #android:id@title_container#t
+    .line 3872
+    const v7, 0x1020035
 
     invoke-virtual {p0, v7}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
+    .line 3874
     .local v5, "titleContainer":Landroid/view/View;
     if-eqz v5, :cond_12
 
+    .line 3875
     invoke-virtual {v5, v11}, Landroid/view/View;->setVisibility(I)V
 
+    .line 3879
     :goto_4
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mContentParent:Landroid/view/ViewGroup;
 
@@ -3023,7 +3022,8 @@
     .locals 2
 
     .prologue
-    const v1, #android:id@content#t
+    .line 4181
+    const v1, 0x1020002
 
     invoke-virtual {p0, v1}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
@@ -5434,7 +5434,7 @@
 
     move-result-object v25
 
-    const v26, #android:bool@target_honeycomb_needs_options_menu#t
+    const v26, 0x112000b
 
     invoke-virtual/range {v25 .. v26}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -5948,8 +5948,10 @@
 
     if-eqz v25, :cond_2f
 
-    const v13, #android:layout@screen_swipe_dismiss#t
+    .line 3690
+    const v13, 0x10900ba
 
+    .line 3746
     .local v13, "layoutResource":I
     :goto_9
     move-object/from16 v0, p0
@@ -6001,7 +6003,8 @@
 
     iput-object v12, v0, Lcom/android/internal/policy/impl/PhoneWindow;->mContentRoot:Landroid/view/ViewGroup;
 
-    const v25, #android:id@content#t
+    .line 3752
+    const v25, 0x1020002
 
     move-object/from16 v0, p0
 
@@ -6167,7 +6170,7 @@
 
     move-result-object v25
 
-    const v26, #android:attr@dialogTitleIconsDecorLayout#t
+    const v26, 0x1010505
 
     const/16 v27, 0x1
 
@@ -6203,7 +6206,7 @@
     .line 3698
     .end local v13    # "layoutResource":I
     :cond_30
-    const v13, #android:layout@screen_title_icons#t
+    const v13, 0x10900bc
 
     .restart local v13    # "layoutResource":I
     goto :goto_a
@@ -6221,11 +6224,13 @@
 
     if-nez v25, :cond_32
 
-    const v13, #android:layout@screen_progress#t
+    .line 3707
+    const v13, 0x10900b7
 
     .restart local v13    # "layoutResource":I
     goto/16 :goto_9
 
+    .line 3709
     .end local v13    # "layoutResource":I
     :cond_32
     and-int/lit16 v0, v9, 0x80
@@ -6258,7 +6263,7 @@
 
     move-result-object v25
 
-    const v26, #android:attr@dialogCustomTitleDecorLayout#t
+    const v26, 0x1010506
 
     const/16 v27, 0x1
 
@@ -6294,7 +6299,7 @@
     .line 3718
     .end local v13    # "layoutResource":I
     :cond_33
-    const v13, #android:layout@screen_custom_title#t
+    const v13, 0x10900b6
 
     .restart local v13    # "layoutResource":I
     goto :goto_b
@@ -6330,7 +6335,7 @@
 
     move-result-object v25
 
-    const v26, #android:attr@dialogTitleDecorLayout#t
+    const v26, 0x1010507
 
     const/16 v27, 0x1
 
@@ -6365,7 +6370,7 @@
     .line 3731
     const/16 v25, 0x1d
 
-    const v26, #android:layout@screen_action_bar#t
+    const v26, 0x10900b5
 
     move/from16 v0, v25
 
@@ -6381,7 +6386,7 @@
     .line 3735
     .end local v13    # "layoutResource":I
     :cond_36
-    const v13, #android:layout@screen_title#t
+    const v13, 0x10900bb
 
     .restart local v13    # "layoutResource":I
     goto/16 :goto_9
@@ -6395,14 +6400,16 @@
 
     if-eqz v25, :cond_38
 
-    const v13, #android:layout@screen_simple_overlay_action_mode#t
+    .line 3739
+    const v13, 0x10900b9
 
     .restart local v13    # "layoutResource":I
     goto/16 :goto_9
 
+    .line 3742
     .end local v13    # "layoutResource":I
     :cond_38
-    const v13, #android:layout@screen_simple#t
+    const v13, 0x10900b8
 
     .restart local v13    # "layoutResource":I
     goto/16 :goto_9
@@ -7237,7 +7244,7 @@
     .param p1, "st"    # Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;
 
     .prologue
-    const v9, #android:attr@actionBarWidgetTheme#t
+    const v9, 0x1010397
 
     const/4 v8, 0x1
 
@@ -7263,27 +7270,33 @@
 
     if-eqz v6, :cond_3
 
+    .line 1251
     new-instance v4, Landroid/util/TypedValue;
 
     invoke-direct {v4}, Landroid/util/TypedValue;-><init>()V
 
+    .line 1252
     .local v4, "outValue":Landroid/util/TypedValue;
     invoke-virtual {v1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
 
+    .line 1253
     .local v0, "baseTheme":Landroid/content/res/Resources$Theme;
-    const v6, #android:attr@actionBarTheme#t
+    const v6, 0x1010431
 
     invoke-virtual {v0, v6, v4, v8}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
+    .line 1255
     const/4 v5, 0x0
 
+    .line 1256
     .local v5, "widgetTheme":Landroid/content/res/Resources$Theme;
     iget v6, v4, Landroid/util/TypedValue;->resourceId:I
 
     if-eqz v6, :cond_4
 
+    .line 1257
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -7673,19 +7686,23 @@
 
     if-ne p1, v1, :cond_2
 
+    .line 1516
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/internal/policy/impl/PhoneWindow;->updateProgressBars(I)V
 
+    .line 1523
     :cond_1
     :goto_0
     return-void
 
+    .line 1517
     :cond_2
     const/4 v1, 0x7
 
     if-ne p1, v1, :cond_1
 
-    const v1, #android:id@title_container#t
+    .line 1518
+    const v1, 0x1020035
 
     invoke-virtual {p0, v1}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
@@ -10864,237 +10881,4 @@
     .line 1478
     :cond_0
     return-void
-.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$000(Lcom/android/internal/policy/impl/PhoneWindow;)I
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    iget v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mInvalidatePanelMenuFeatures:I
-#    return v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$002(Lcom/android/internal/policy/impl/PhoneWindow;I)I
-#    .locals 0
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .param p1, "x1"    # I
-#    .prologue
-#    iput p1, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mInvalidatePanelMenuFeatures:I
-#    return p1
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$1000(Lcom/android/internal/policy/impl/PhoneWindow;Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;ILandroid/view/KeyEvent;I)Z
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .param p1, "x1"    # Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;
-#    .param p2, "x2"    # I
-#    .param p3, "x3"    # Landroid/view/KeyEvent;
-#    .param p4, "x4"    # I
-#    .prologue
-#    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/internal/policy/impl/PhoneWindow;->performPanelShortcut(Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;ILandroid/view/KeyEvent;I)Z
-#    move-result v0
-#    return v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$1100(Lcom/android/internal/policy/impl/PhoneWindow;IZ)Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .param p1, "x1"    # I
-#    .param p2, "x2"    # Z
-#    .prologue
-#    invoke-direct {p0, p1, p2}, Lcom/android/internal/policy/impl/PhoneWindow;->getPanelState(IZ)Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;
-#    move-result-object v0
-#    return-object v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$1200(Lcom/android/internal/policy/impl/PhoneWindow;)Lcom/android/internal/view/menu/ContextMenuBuilder;
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mContextMenu:Lcom/android/internal/view/menu/ContextMenuBuilder;
-#    return-object v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$1202(Lcom/android/internal/policy/impl/PhoneWindow;Lcom/android/internal/view/menu/ContextMenuBuilder;)Lcom/android/internal/view/menu/ContextMenuBuilder;
-#    .locals 0
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .param p1, "x1"    # Lcom/android/internal/view/menu/ContextMenuBuilder;
-#    .prologue
-#    iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mContextMenu:Lcom/android/internal/view/menu/ContextMenuBuilder;
-#    return-object p1
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$1300(Lcom/android/internal/policy/impl/PhoneWindow;)Lcom/android/internal/view/menu/MenuDialogHelper;
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mContextMenuHelper:Lcom/android/internal/view/menu/MenuDialogHelper;
-#    return-object v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$1302(Lcom/android/internal/policy/impl/PhoneWindow;Lcom/android/internal/view/menu/MenuDialogHelper;)Lcom/android/internal/view/menu/MenuDialogHelper;
-#    .locals 0
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .param p1, "x1"    # Lcom/android/internal/view/menu/MenuDialogHelper;
-#    .prologue
-#    iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mContextMenuHelper:Lcom/android/internal/view/menu/MenuDialogHelper;
-#    return-object p1
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$1600(Lcom/android/internal/policy/impl/PhoneWindow;)Z
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mIsFloating:Z
-#    return v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$1700(Lcom/android/internal/policy/impl/PhoneWindow;)I
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    iget v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mStatusBarColor:I
-#    return v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$1800(Lcom/android/internal/policy/impl/PhoneWindow;)I
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    iget v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mNavigationBarColor:I
-#    return v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$1900(Lcom/android/internal/policy/impl/PhoneWindow;)Landroid/graphics/Rect;
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mTempRect:Landroid/graphics/Rect;
-#    return-object v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$1902(Lcom/android/internal/policy/impl/PhoneWindow;Landroid/graphics/Rect;)Landroid/graphics/Rect;
-#    .locals 0
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .param p1, "x1"    # Landroid/graphics/Rect;
-#    .prologue
-#    iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mTempRect:Landroid/graphics/Rect;
-#    return-object p1
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$2000(Lcom/android/internal/policy/impl/PhoneWindow;)I
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindow;->getLocalFeatures()I
-#    move-result v0
-#    return v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$2100(Lcom/android/internal/policy/impl/PhoneWindow;I)V
-#    .locals 0
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .param p1, "x1"    # I
-#    .prologue
-#    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindow;->setDefaultWindowFormat(I)V
-#    return-void
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$2200(Lcom/android/internal/policy/impl/PhoneWindow;)V
-#    .locals 0
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindow;->openPanelsAfterRestore()V
-#    return-void
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$2300(Lcom/android/internal/policy/impl/PhoneWindow;)Lcom/android/internal/widget/DecorContentParent;
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mDecorContentParent:Lcom/android/internal/widget/DecorContentParent;
-#    return-object v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$2800(Lcom/android/internal/policy/impl/PhoneWindow;)V
-#    .locals 0
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindow;->dismissContextMenu()V
-#    return-void
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$500(Lcom/android/internal/policy/impl/PhoneWindow;ILcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;Landroid/view/Menu;)V
-#    .locals 0
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .param p1, "x1"    # I
-#    .param p2, "x2"    # Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;
-#    .param p3, "x3"    # Landroid/view/Menu;
-#    .prologue
-#    invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/policy/impl/PhoneWindow;->callOnPanelClosed(ILcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;Landroid/view/Menu;)V
-#    return-void
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$600(Lcom/android/internal/policy/impl/PhoneWindow;)Landroid/view/ViewGroup;
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mContentRoot:Landroid/view/ViewGroup;
-#    return-object v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$700(Lcom/android/internal/policy/impl/PhoneWindow;)Landroid/view/ViewGroup;
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mContentParent:Landroid/view/ViewGroup;
-#    return-object v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$800(Lcom/android/internal/policy/impl/PhoneWindow;)I
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    iget v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mPanelChordingKey:I
-#    return v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$900(Lcom/android/internal/policy/impl/PhoneWindow;)Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;
-#    .locals 1
-#    .param p0, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow;
-#    .prologue
-#    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mPreparedPanel:Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;
-#    return-object v0
-#.end method
-
-.method getDecorContentParent()Lcom/android/internal/widget/DecorContentParent;
-    .locals 1
-
-    .prologue
-    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mDecorContentParent:Lcom/android/internal/widget/DecorContentParent;
-
-    return-object v0
 .end method
