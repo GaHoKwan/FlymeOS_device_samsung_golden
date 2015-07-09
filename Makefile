@@ -74,7 +74,7 @@ vendor_saved_apps := Bluetooth KeyChain HTMLViewer UserDictionaryProvider Backup
 # You need to decode android.policy.jar to the project directory (use apktool d android.policy.jar) first,
 # and then you can make it by:   make android.policy
 #-----------------------------------------------------------------------------
-vendor_modify_jars := android.policy ext framework services telephony-common
+vendor_modify_jars := android.policy framework services telephony-common
 
 ##############################################################################
 # The value decides which board system directory you want to save.
@@ -88,14 +88,14 @@ vendor_modify_jars := android.policy ext framework services telephony-common
 # The default value is nothing.
 # You can configure the board system file path which relative to the system directory in the board release.
 #-----------------------------------------------------------------------------
-board_saved_files := lib/libwebviewchromium.so
+#board_saved_files := lib/libsqlite.so lib/libwebviewchromium.so
 
 ##############################################################################
 # The value decides which board system apk you want to remove.
 # The default value is nothing.
 # You can configure the board system apk name in the value.
 #-----------------------------------------------------------------------------
-#board_remove_apps := LogReport
+board_remove_apps := LogReport NfcNci
 
 ##############################################################################
 # The value decides which apk you want to modify, when the apk is based on the board system apk.
